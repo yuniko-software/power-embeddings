@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.35821.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{0E7809FE-B711-42BE-AB8C-7BCF668321C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerEmbeddings.Core", "src\PowerEmbeddings.Core\PowerEmbeddings.Core.csproj", "{9CE2DADE-44AD-4A74-9431-19DFC2BA8690}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerEmbeddings.Sample.Web", "samples\PowerEmbeddings.Sample.Web\PowerEmbeddings.Sample.Web.csproj", "{5D436C60-6755-4A7D-8548-D38DD936143F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3FD97D30-7DB0-442A-9E2C-82A72FB1177D}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CE2DADE-44AD-4A74-9431-19DFC2BA8690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE2DADE-44AD-4A74-9431-19DFC2BA8690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE2DADE-44AD-4A74-9431-19DFC2BA8690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE2DADE-44AD-4A74-9431-19DFC2BA8690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D436C60-6755-4A7D-8548-D38DD936143F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D436C60-6755-4A7D-8548-D38DD936143F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D436C60-6755-4A7D-8548-D38DD936143F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D436C60-6755-4A7D-8548-D38DD936143F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9CE2DADE-44AD-4A74-9431-19DFC2BA8690} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{5D436C60-6755-4A7D-8548-D38DD936143F} = {0E7809FE-B711-42BE-AB8C-7BCF668321C9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9B5E71B-3C64-49BD-A0C2-D8EFB3F74162}
+	EndGlobalSection
+EndGlobal
