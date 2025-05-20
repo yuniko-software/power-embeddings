@@ -10,6 +10,7 @@
 		<!-- Language settings -->
 		<Nullable>enable</Nullable>
 		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 
 	<ItemGroup>
