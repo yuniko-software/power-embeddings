@@ -70,7 +70,7 @@ class OnnxBGEM3Embedder:
                 weight = sparse_weights[0, i]  # [batch, seq_len]
                 if weight > 0:
                     token_id_int = int(token_id)
-                    sparse_dict[str(token_id_int)] = max(sparse_dict.get(str(token_id_int), 0), float(weight))
+                    sparse_dict[str(token_id_int)] = max(sparse_dict.get(str(token_id_int), 0), float(weight.item()))
         
         # Process ColBERT vectors
         colbert_list = []
@@ -86,6 +86,7 @@ class OnnxBGEM3Embedder:
 
 def main():
     """Generate reference embeddings for all three types using BGE-M3 ONNX models"""
+    
     script_dir = os.getcwd()
     onnx_dir = os.path.join(script_dir, "onnx")
     
@@ -97,6 +98,7 @@ def main():
     print(f"Using model: {model_path}")
     print(f"Output will be saved to: {output_path}")
 
+    # Verify files exist
     if not os.path.exists(tokenizer_path):
         print(f"ERROR: Tokenizer file not found at {tokenizer_path}")
         return
@@ -105,6 +107,7 @@ def main():
         print(f"ERROR: Model file not found at {model_path}")
         return
 
+    # Initialize the BGE-M3 embedder
     print("Initializing BGE-M3 ONNX embedder...")
     embedder = OnnxBGEM3Embedder(tokenizer_path, model_path)
     
@@ -123,23 +126,16 @@ def main():
     embeddings = {}
     
     for text in test_texts:
-        print(f"Generating embeddings for: '{text[:50]}{'...' if len(text) > 50 else ''}'")
-        
         result = embedder.encode(text)
         
         embeddings[text] = result
-        
-        print(f"  Dense embedding length: {len(result['dense_vecs'])}")
-        print(f"  Sparse weights count: {len(result['lexical_weights'])}")
-        print(f"  ColBERT vectors count: {len(result['colbert_vecs'])}")
-        if len(result['colbert_vecs']) > 0:
-            print(f"  ColBERT vector dimension: {len(result['colbert_vecs'][0])}")
     
+    # Save to JSON file
     print(f"\nSaving reference embeddings to {output_path}")
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(embeddings, f, ensure_ascii=False, indent=2)
     
-    print(f"✅ Saved {len(embeddings)} reference embeddings with all three types (dense, sparse, ColBERT)")
+    print(f"Saved {len(embeddings)} reference embeddings with all three types (dense, sparse, ColBERT)")
     print("\nReference embeddings generated successfully!")
 
 if __name__ == "__main__":
