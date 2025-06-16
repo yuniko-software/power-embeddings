@@ -34,6 +34,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dotnet", "dotnet", "{F549F8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerEmbeddings.Research.E5LargeInstruct.Onnx", "research\multilingual-e5-large-instruct\dotnet\PowerEmbeddings.Research.E5LargeInstruct.Onnx\PowerEmbeddings.Research.E5LargeInstruct.Onnx.csproj", "{F0FBD184-5A05-40A3-BAD8-A94B784B6A3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerEmbeddings.Research.E5LargeInstruct.Onnx.Tests", "research\multilingual-e5-large-instruct\dotnet\PowerEmbeddings.Research.E5LargeInstruct.Onnx.Tests\PowerEmbeddings.Research.E5LargeInstruct.Onnx.Tests.csproj", "{349BC950-65B1-4B73-941D-3488F210BDE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +62,10 @@ Global
 		{F0FBD184-5A05-40A3-BAD8-A94B784B6A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0FBD184-5A05-40A3-BAD8-A94B784B6A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0FBD184-5A05-40A3-BAD8-A94B784B6A3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{349BC950-65B1-4B73-941D-3488F210BDE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{349BC950-65B1-4B73-941D-3488F210BDE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{349BC950-65B1-4B73-941D-3488F210BDE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{349BC950-65B1-4B73-941D-3488F210BDE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{78BFB3DB-223D-48D6-AD72-A4F6BC4DF135} = {D1622A07-A997-4661-92B9-65AB0519CE1B}
 		{F549F88B-27B1-43CB-9461-8B3987925BDC} = {78BFB3DB-223D-48D6-AD72-A4F6BC4DF135}
 		{F0FBD184-5A05-40A3-BAD8-A94B784B6A3D} = {F549F88B-27B1-43CB-9461-8B3987925BDC}
+		{349BC950-65B1-4B73-941D-3488F210BDE6} = {F549F88B-27B1-43CB-9461-8B3987925BDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B9B5E71B-3C64-49BD-A0C2-D8EFB3F74162}
